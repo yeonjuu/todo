@@ -4,7 +4,6 @@
  * @property {string} content 
  * @property {boolean} isDone
  * @property {string} category 
- * @property {string[]} tags
  */
 
 /**
@@ -19,7 +18,7 @@
  * @param {string} category
  * @param {string[]} tags 
  */
-function createTodo(id,content,isDone=false,category,tags=[]){}
+function createTodo(id,content,isDone=false,category){}
 
 /**
  * @function read todo
@@ -39,12 +38,12 @@ function readAll(){}
  * @param {string} id
  * @param {string} content
  * @param {boolean} isDone
- * @param {string[]} tags
  */
-function updateTodo(id, content, isDone, tags){}
+function updateTodo(id, content, isDone){}
 
 /**
  * @function delete todo
+ * @param {string} id
  */
 function deleteTodo(id){}
 
