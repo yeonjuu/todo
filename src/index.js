@@ -1,51 +1,54 @@
 /**
- * Represents a book.
- * @constructor
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
+ * @typedef todo
+ * @property {string} id 
+ * @property {string} content 
+ * @property {boolean} isDone
+ * @property {string} category 
+ * @property {string[]} tags
  */
-function Book(title, author) {}
 
 /**
- * Both of these will link to the bar function.
- * @see {@link bar}
- * @see bar
+ * @type {object[]} todos
  */
-function foo() {}
-
-// Use the inline {@link} tag to include a link within a free-form description.
-/**
- * @see {@link foo} for further information.
- * @see {@link http://github.com|GitHub}
- */
-function bar() {}
 
 /**
- * Generic dairy product.
- * @constructor
+ * @function create todo
+ * @param {string} id
+ * @param {string} content
+ * @param {boolean} isDone
+ * @param {string} category
+ * @param {string[]} tags 
  */
-function DairyProduct() {}
+function createTodo(id,content,isDone=false,category,tags=[]){}
 
 /**
- * Check whether the dairy product is solid at room temperature.
- * @abstract
- * @return {boolean}
+ * @function read todo
+ * @param {string} id 
+ * @returns {object[]} todos
  */
-DairyProduct.prototype.isSolid = function () {
-	throw new Error('must be implemented by subclass!');
-};
+function readTodo(id){}
 
 /**
- * Cool, refreshing milk.
- * @constructor
- * @augments DairyProduct
+ * @function read todos
+ * @returns {object[]} todos
  */
-function Milk() {}
+function readAll(){}
 
 /**
- * Check whether milk is solid at room temperature.
- * @return {boolean} Always returns false.
+ * @function update 
+ * @param {string} id
+ * @param {string} content
+ * @param {boolean} isDone
+ * @param {string[]} tags
  */
-Milk.prototype.isSolid = function () {
-	return false;
-};
+function updateTodo(id, content, isDone, tags){}
+
+/**
+ * @function delete todo
+ */
+function deleteTodo(id){}
+
+/**
+ * @function delete todos
+ */
+function deleteAll(){}
