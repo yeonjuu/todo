@@ -1,5 +1,5 @@
 /**
- * @typedef todo
+ * @typedef Todo
  * @property {string} id 
  * @property {string} content 
  * @property {boolean} isDone
@@ -7,11 +7,11 @@
  */
 
 /**
- * @type {object[]} todos
+ * @type {Todo[]} todos
  */
 
 /**
- * @function create todo
+ * @function createTodo
  * @param {string} id
  * @param {string} content
  * @param {boolean} isDone
@@ -21,20 +21,20 @@
 function createTodo(id,content,isDone=false,category){}
 
 /**
- * @function read todo
+ * @function readTodo
  * @param {string} id 
  * @returns {object[]} todos
  */
 function readTodo(id){}
 
 /**
- * @function read todos
+ * @function readAll
  * @returns {object[]} todos
  */
 function readAll(){}
 
 /**
- * @function update 
+ * @function updateTodo 
  * @param {string} id
  * @param {string} content
  * @param {boolean} isDone
@@ -42,12 +42,12 @@ function readAll(){}
 function updateTodo(id, content, isDone){}
 
 /**
- * @function delete todo
+ * @function deleteTodo
  * @param {string} id
  */
 function deleteTodo(id){}
 
 /**
- * @function delete todos
+ * @function deleteAll
  */
 function deleteAll(){}
